@@ -10,7 +10,15 @@ public class PhoneBook {
         }
         return phoneBook.size();
     }
-    public static String findByNumber(String number){
-        return null;
+
+    public static String findByNumber(String number) {
+        if (phoneBook.containsValue(number)) {
+            for (Map.Entry<String, String> entry : phoneBook.entrySet()) {
+                if (phoneBook.get(entry.getKey()).equals(number)) {
+                    return entry.getKey();
+                }
+            }
+        }
+        return "No name";
     }
 }
