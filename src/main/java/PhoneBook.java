@@ -21,4 +21,7 @@ public class PhoneBook {
         }
         return "No name";
     }
+    public static String findByName(String name) {
+        return null;
+    }
 }

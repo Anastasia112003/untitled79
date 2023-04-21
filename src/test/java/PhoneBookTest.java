@@ -22,4 +22,10 @@ public class PhoneBookTest {
         String result = PhoneBook.findByNumber("8585039282882");
         assertEquals(result, "Kate");
     }
+    @Test
+    public void findByNameTest(){
+        PhoneBook.add("Kate", "8585039282882");
+        String result=PhoneBook.findByName("Kate");
+        assertEquals(result,"8585039282882");
+    }
 }
