@@ -29,6 +29,10 @@ public class PhoneBook {
         return "No number";
     }
     public static String printAllNames(){
-        return null;
+        StringBuilder builder = new StringBuilder();
+        for (Map.Entry<String, String> entry : phoneBook.entrySet()) {
+            builder.append(entry.getKey()).append(" ");
+        }
+        return  builder.toString();
     }
 }
